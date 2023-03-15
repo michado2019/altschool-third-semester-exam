@@ -1,13 +1,14 @@
-<script setup>
-import Home from './components/Home.vue'
+<script>
+ export default{
+  name: 'App'
+ }
 </script>
 
 <template>
   <main class="App">
-    <Home />
+    
+    <RouterView></RouterView>
   </main>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
