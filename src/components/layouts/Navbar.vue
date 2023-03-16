@@ -34,12 +34,13 @@ export default {
 .navbarWrapper {
   height: 100px;
   background-color: #212121;
-  position: sticky;
   top: 0;
   left: 0;
+  margin: 0 auto;
 }
 .navbarNav {
   display: flex;
+  box-shadow: 1px 3px 4px #3a3a3a;
   align-items: center;
   padding: 30px 20px;
 }
@@ -75,9 +76,7 @@ export default {
   cursor: pointer;
 }
 @media screen and (max-width: 480px) {
-  .navbarNav {
-    box-shadow: 10px 3px 4px #3a3a3a;
-  }
+
   .navbarLists {
     display: none;
   }

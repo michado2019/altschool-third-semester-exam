@@ -21,11 +21,12 @@ export default {
 
 <style scoped>
 .footerWrapper {
-  margin-top: 69vh;
+  padding-top: 16vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
   background-color: #212121;
+  height: 175px;
 }
 .footerContents-one {
   display: grid;
@@ -38,12 +39,12 @@ export default {
   justify-content: center;
 }
 .footerLinks{
-  color: #1a4520;
+  color: #22662b;
   text-decoration: none;
   font-weight: 550;
 }
 .footerCopyright{
-  color: #1a4520;
+  color: #22662b;
   font-weight: 550;
   font-size: 14px;
 }
