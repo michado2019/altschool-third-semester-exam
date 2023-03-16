@@ -7,7 +7,7 @@ export default {
   components: { Navbar, Footer, SmallScreenNavbar },
   data() {
     return {
-      smallScreenNavbar: true,
+      smallScreenNavbar: false,
     };
   },
   methods: {
@@ -23,7 +23,9 @@ export default {
   <main class="App">
     <Navbar :controlSmallScreenNavbar="this.controlSmallScreenNavbar" />
     <SmallScreenNavbar :smallScreenNavbar="this.smallScreenNavbar" />
-    <RouterView></RouterView>
+    <div>
+      <RouterView></RouterView>
+    </div>
     <Footer />
   </main>
 </template>
@@ -33,7 +35,7 @@ export default {
   max-width: 70%;
   margin: 0 auto;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 830px) {
   .App {
     max-width: 80%;
   }

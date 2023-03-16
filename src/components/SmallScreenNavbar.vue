@@ -6,7 +6,7 @@ export default {
 </script>
 
 <template>
-  <div class="smallScreen-wrapper" :style= "[smallScreenNavbar ? {marginLeft: '-500px', transition: 'all 0.5s'} : {marginLeft: '0', transition: 'all 0.5s'}]">
+  <div class="smallScreen-wrapper" :style= "[smallScreenNavbar ? {marginLeft: '0', transition: 'all 0.5s'} : {marginLeft: '-500px', transition: 'all 0.5s'}]">
     <nav class="smallScreen-navbar_nav">
       <ul class="smallScreen-navbar_lists">
         <Router-link to="/" class="smallScreen-navbar_links">
@@ -26,11 +26,9 @@ export default {
 <style scoped>
 .smallScreen-wrapper{
   background-color: #212121;
-  position: absolute;
-  top: 100px;
   left: 0;
-  height: calc(100vh - 100px);
   width: 100%;
+  height: 100%;
 }
 .smallScreen-navbar_nav {
   margin-left: -40px;

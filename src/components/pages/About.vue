@@ -7,25 +7,26 @@ export default {
 <template>
   <div class="aboutWrapper">
     <div class="aboutContents">
-      Create a new vue js application then using the GitHub API, fetch your
-      GitHub repositories using this endpoint <span class="aboutLink">https://api.github.com/users/{{
-        USERNAME
-      }}/repos</span>. show a page with a list of all your repositories on GitHub(the
-      page should have some form of pagination). Then create another page
-      showing data for a single repo clicked from the list of repos using nested
-      routes. Make sure to implement a wildcard route to catch 404 pages. NB:
-      Good UI and Designs are important.
+      A vue js app using the GitHub API to fetch my GitHub repositories using
+      this endpoint
+      <span class="aboutLink"
+        >https://api.github.com/users/{{ USERNAME }}/repos</span
+      >. shows a page with a list of all my repositories on GitHub(the page has
+      a form of pagination). It has a single showing data for a single repo
+      clicked from the list of repos using nested routes. It uses a wildcard
+      route to catch 404 pages.
     </div>
   </div>
 </template>
 
 <style scoped>
-.aboutWrapper{
+.aboutWrapper {
   height: 65vh;
-  padding-top: 50px;
+  padding-top: 70px;
+  padding-bottom: 300px;
   background-color: #212121;
 }
-.aboutContents{
+.aboutContents {
   width: 70%;
   color: #ccc8c8;
   margin: 0 auto;
@@ -33,7 +34,13 @@ export default {
   font-size: 20px;
   line-height: 38px;
 }
-.aboutLink{
-  color: #745b21
+.aboutLink {
+  color: #745b21;
+}
+@media screen and (max-width: 600px) {
+  .aboutContents {
+    width: 90%;
+    font-size: 18px;
+  }
 }
 </style>
