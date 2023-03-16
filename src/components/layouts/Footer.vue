@@ -5,7 +5,13 @@ export default {
 </script>
 
 <template>
-  <div>Footer</div>
+  <div class="footerWrapper">
+    <h1>Footer</h1>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.footerWrapper{
+  margin-top: 65vh;
+}
+</style>

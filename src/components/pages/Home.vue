@@ -5,7 +5,13 @@ export default {
 </script>
 
 <template>
-  <div>Home</div>
+  <div>
+    <h1>Home</h1>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+h1{
+  color: #f2f2f2;
+}
+</style>
