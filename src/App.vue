@@ -15,4 +15,9 @@ import Footer from './components/layouts/Footer.vue'
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+.App{
+  max-width: 70%;
+  margin: 0 auto;
+}
+</style>
