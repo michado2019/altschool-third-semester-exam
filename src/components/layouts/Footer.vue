@@ -6,12 +6,45 @@ export default {
 
 <template>
   <div class="footerWrapper">
-    <h1>Footer</h1>
+    <div class="footerContents-one">
+      <Router-link to="/" class="footerLinks"> GApp </Router-link>
+      <Router-link to="/" class="footerLinks"> Home </Router-link>
+      <Router-link to="/about" class="footerLinks"> About </Router-link>
+      <Router-link to="/about" class="footerLinks"> Contact me </Router-link>
+    </div>
+    <div class="footerContents-two">
+      <h3 class="footerCopyright">All right reserved</h3>
+      <p class="footerCopyright">&copy; Michado2023.</p>
+    </div>
   </div>
 </template>
 
 <style scoped>
-.footerWrapper{
-  margin-top: 65vh;
+.footerWrapper {
+  margin-top: 69vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #212121;
+}
+.footerContents-one {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+}
+.footerContents-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footerLinks{
+  color: #1a4520;
+  text-decoration: none;
+  font-weight: 550;
+}
+.footerCopyright{
+  color: #1a4520;
+  font-weight: 550;
+  font-size: 14px;
 }
 </style>
