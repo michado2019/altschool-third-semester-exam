@@ -5,7 +5,53 @@ export default {
 </script>
 
 <template>
-  <div>Contact</div>
+  <div class="contactWrapper">
+    <div class="contactContents">
+      <h2>
+        For your web development you can contact me by clicking the big button
+        below
+      </h2>
+      <button class="contactBtn-contact">
+        <a
+          href="mailto: adeshinaobafemi09@gmail.com"
+          class="contactContact-link"
+          >Contact</a
+        >
+      </button>
+    </div>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.contactWrapper {
+  background-color: #212121;
+}
+.contactContents {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  height: 66vh;
+  padding-bottom: 50px;
+}
+.contactContents h2{
+  color: #ccc8c8;
+}
+.contactBtn-contact {
+  padding: 20px 80px;
+  border-radius: 7px;
+  border: 0;
+  background-color: #745b21;
+  margin-top: 70px;
+}
+.contactBtn-contact:hover {
+  font-weight: 800;
+}
+.contactContact-link {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+</style>
