@@ -55,7 +55,7 @@ export default {
   align-items: center;
 }
 .navbarLinks {
-  color: #1a4520;
+  color: #098c1a;
   text-decoration: none;
 }
 .navbarList {
