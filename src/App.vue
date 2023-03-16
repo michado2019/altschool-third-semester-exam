@@ -20,4 +20,9 @@ import Footer from './components/layouts/Footer.vue'
   max-width: 70%;
   margin: 0 auto;
 }
+@media screen and (max-width: 768px) {
+ .App{
+  max-width: 100%;
+ }
+}
 </style>
