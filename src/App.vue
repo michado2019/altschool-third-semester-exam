@@ -10,19 +10,19 @@ export default {
       smallScreenNavbar: true,
     };
   },
-  methods:{
-    controlSmallScreenNavbar(){
-     this.smallScreenNavbar = !this.smallScreenNavbar
-     console.log(this.smallScreenNavbar)   
-    }
-  }
+  methods: {
+    controlSmallScreenNavbar() {
+      this.smallScreenNavbar = !this.smallScreenNavbar;
+      console.log(this.smallScreenNavbar);
+    },
+  },
 };
 </script>
 
 <template>
   <main class="App">
     <Navbar :controlSmallScreenNavbar="this.controlSmallScreenNavbar" />
-    <SmallScreenNavbar :smallScreenNavbar="this.smallScreenNavbar"/>
+    <SmallScreenNavbar :smallScreenNavbar="this.smallScreenNavbar" />
     <RouterView></RouterView>
     <Footer />
   </main>
@@ -32,6 +32,11 @@ export default {
 .App {
   max-width: 70%;
   margin: 0 auto;
+}
+@media screen and (max-width: 800px) {
+  .App {
+    max-width: 80%;
+  }
 }
 @media screen and (max-width: 768px) {
   .App {

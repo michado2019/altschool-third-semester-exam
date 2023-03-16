@@ -10,7 +10,7 @@ export default {
       <Router-link to="/" class="footerLinks"> GApp </Router-link>
       <Router-link to="/" class="footerLinks"> Home </Router-link>
       <Router-link to="/about" class="footerLinks"> About </Router-link>
-      <Router-link to="/about" class="footerLinks"> Contact me </Router-link>
+      <Router-link to="/contact" class="footerLinks"> Contact me </Router-link>
     </div>
     <div class="footerContents-two">
       <h3 class="footerCopyright">All right reserved</h3>
@@ -21,12 +21,12 @@ export default {
 
 <style scoped>
 .footerWrapper {
-  padding-top: 16vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
   background-color: #212121;
-  height: 175px;
+  height: 121px;
+  border-top: 1px solid #3a3a3a;
 }
 .footerContents-one {
   display: grid;
@@ -47,5 +47,15 @@ export default {
   color: #22662b;
   font-weight: 550;
   font-size: 14px;
+}
+@media screen and (max-width: 565px) {
+.footerWrapper {
+  height: 172px;
+}
+}
+@media screen and (max-width: 450px) {
+.footerWrapper {
+  height: 190px;
+}
 }
 </style>
