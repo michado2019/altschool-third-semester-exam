@@ -14,7 +14,11 @@ export default {
         ><span>and get an overview of it.</span>
       </p>
       <div class="homeBtn-div">
-        <button class="homeBtn-start">Get started</button>
+        <button class="homeBtn-start">
+          <Router-link to="/repos" class="homeStart-link">
+            Get started
+          </Router-link>
+        </button>
         <button class="homeBtn-contact">
           <a href="mailto: adeshinaobafemi09@gmail.com" class="homeContact-link"
             >Contact</a
@@ -80,7 +84,7 @@ div {
   font-weight: 800;
   transition: all 0.3s;
 }
-.homeContact-link {
+.homeContact-link, .homeStart-link {
   text-decoration: none;
   color: #f2f2f2;
 }
