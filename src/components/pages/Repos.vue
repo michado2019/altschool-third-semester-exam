@@ -70,6 +70,7 @@ export default {
   align-items: center;
   background-color: #111;
   justify-content: center;
+  height: 65vh;
 }
 .reposIsloading{
     padding-top: 50px;
