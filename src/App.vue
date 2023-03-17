@@ -13,7 +13,6 @@ export default {
   methods: {
     controlSmallScreenNavbar() {
       this.smallScreenNavbar = !this.smallScreenNavbar;
-      console.log(this.smallScreenNavbar);
     },
   },
 };

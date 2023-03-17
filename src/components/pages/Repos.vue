@@ -42,14 +42,15 @@ export default {
                       class="reposArrow-img"
                     />
                   </div>
-
                   <h2 class="reposCreated-at">
                     Created at: {{ repo.created_at }}
                   </h2>
                   <h2 class="reposCreated-at">
                     Updated at: {{ repo.updated_at }}
                   </h2>
-                  <button class="reposMore-btn">more</button>
+                  <Router-link :to="`/repos/${repo.id}`">
+                    <button class="reposMore-btn">more</button>
+                  </Router-link>
                 </div>
               </div>
             </div>

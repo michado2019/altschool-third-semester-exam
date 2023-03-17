@@ -12,7 +12,7 @@ export default {
       <span class="aboutLink"
         >https://api.github.com/users/userName/repos</span
       >. shows a page with a list of all my repositories on GitHub(the page has
-      a form of pagination). It has a single showing data for a single repo
+      a form of pagination). It has a single page showing data for a single repo
       clicked from the list of repos using nested routes. It uses a wildcard
       route to catch 404 pages.
     </div>
