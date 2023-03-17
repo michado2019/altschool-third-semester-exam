@@ -84,7 +84,8 @@ div {
   font-weight: 800;
   transition: all 0.3s;
 }
-.homeContact-link, .homeStart-link {
+.homeContact-link,
+.homeStart-link {
   text-decoration: none;
   color: #f2f2f2;
 }
@@ -94,8 +95,8 @@ div {
   }
 }
 @media screen and (max-width: 490px) {
-  .homeWrapper{
-  padding-bottom: 40px;
+  .homeWrapper {
+    padding-bottom: 40px;
   }
   div {
     font-size: 22px;
@@ -107,7 +108,7 @@ div {
   }
 }
 @media screen and (max-width: 420px) {
-  .homeContents{
+  .homeContents {
     width: 100%;
   }
   div {

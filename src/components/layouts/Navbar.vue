@@ -76,7 +76,6 @@ export default {
   cursor: pointer;
 }
 @media screen and (max-width: 480px) {
-
   .navbarLists {
     display: none;
   }

@@ -10,7 +10,7 @@ export default {
       A vue js app using the GitHub API to fetch my GitHub repositories using
       this endpoint
       <span class="aboutLink"
-        >https://api.github.com/users/{{ USERNAME }}/repos</span
+        >https://api.github.com/users/userName/repos</span
       >. shows a page with a list of all my repositories on GitHub(the page has
       a form of pagination). It has a single showing data for a single repo
       clicked from the list of repos using nested routes. It uses a wildcard
