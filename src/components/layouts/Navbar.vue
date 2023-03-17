@@ -33,7 +33,7 @@ export default {
 <style scoped>
 .navbarWrapper {
   height: 100px;
-  background-color: #212121;
+  background-color: #111;
   top: 0;
   left: 0;
   margin: 0 auto;

@@ -24,7 +24,7 @@ export default {
   height: 65vh;
   padding-top: 70px;
   padding-bottom: 300px;
-  background-color: #212121;
+  background-color: #111;
 }
 .aboutContents {
   width: 70%;

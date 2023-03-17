@@ -31,7 +31,7 @@ export default {
 <style scoped>
 .homeWrapper {
   padding-bottom: 50px;
-  background-color: #212121;
+  background-color: #111;
 }
 .homeContents {
   display: flex;

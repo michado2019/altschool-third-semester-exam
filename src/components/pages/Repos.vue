@@ -11,7 +11,7 @@ export default {
   <div class="reposWrapper">
     <CustomFetch url="https://api.github.com/users/michado2019/repos">
       <template v-slot:dataContext="{ isLoading, response, error }">
-        <div v-if="isLoading" class="reposIsloading">Loading....</div>
+        <img v-if="isLoading" src="https://help.presentations2go.eu/LTI/lib/Spinner.gif" alt='spinner'  class="reposIsloading" />
         <div v-if="error" class="reposError">{{ error }}</div>
         <div v-else class="reposGrid">
           <div v-for="(repo, index) in response" :key="repo.id">
@@ -23,11 +23,11 @@ export default {
                     <h2 class="reposIndex">{{ index + 1 }}</h2>
                     <div class="reposUpper-part_two">
                       <img
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACECAMAAABmmnOVAAAAk1BMVEX////+zgD/vg7///3/vQD+zAD+wQv/uwD7ywD7uwD///j/3lX+vwz90x/+1jL+2kH9+un89Nv+/PD656D+3Uv56af67LH500H+/OX89tj844n+2Tn+xgj87rj7vxj60DL88s/5zFz511j65Zf78cL62mX60035yET32IT988r72278xDj9zVX51G375q776rv52ZDIvKVrAAAER0lEQVR4nO2a3XaqMBCFE0OagIKAosU/sGrVcqx9/6c7SQiiiBQpkZvsq67WBZ97diYTKABaWlpaWlpaWlpaWlpaWvWFEEBdMwBgWV0TAOB/fPidAvBKbDDe8Jp0KZ9CSK1OY4HACEOIR91m048gU+R2iJAaweqx6RBCGEG7toIZQW0oUtGNeKtkLnAGZkdHfZNBBBhiR0DgoAsEnkqeCCeFgFFXbZMZQccYZlZ0Ug9uxHwOpabdWBGwWI7tDKKLVLDVwBMxhhdFLy8HEomAfQfDKytevJkiYHEj+ja8suLV0w0CE+bBeHjFAPHk1QvEmhaNYAvk1VaIRPRvGLgVL1VqxPAW4tVWiEQUqsGsWKZzJwIq04GyyzvciDEtQMBIfgopXKziyshyw41IhFNkgHgTusrPIe/bYLb7tCmzYF6MpRCl9uduFmzfW3Miv5AbHkezXUQXGLMRgt/N7t/FMvcDYkwjxnIM3eurNQSz/PA4me2mNoX89vLb2rbNfOjb+BFFSgIppvZ+ffg+er4lktIE4fj1GVF6+e6248yHw/F43Be6j2UZikGISVbJv1Pc0Agnu/l8PpR3vtJ9LEv01hMyDJI0hJjQ1FZZBcp4hB3OkKnYI0q16EkZ5nfTPTa4cbwyAqXCgwyCMTQW9+L5e98bQZagcQNDYFknfb8xGOayuQ+c/Q8UOGNYnZuuTyDbS3OKbGWY5+aNSnKAbUOKxUAyNO0QOQSzcVtrNRYlV4axOv7RB5Bu3k0oLgzbFmYLkaj4+Yos8lq0MVtwM8OoGUMStjRjIV6S+DmKjCFu7zwkvHimImkgjJXXvE+WYgC3fjoFw8BYue2Ou/xi3rTmLiJ92Ht/X5v38urlAotOSRKv/bmfX8+vHuikUgZWi1YDket9WsOHgaiFq+45wa/7SFqLHtm206PKIX6ph2TomSohRtUQl3GOqHzC+1UJsbiMlMZJIURlMHMGFkx1DG5Vp7hMtWLXUPdUM/49klKDWBnE8mEk8hOGtOKsDGL2CGJRYOgRdW8Id7VKIZxYK3tgVJ7LOxtEMhUhAKusGiU2iJ5pqXh4xkoclkAsyhl6JFRSj/RJci0bOMQfjuGVEJsCBOZpIIZByiB+lEAAlC8OQcNbpEFOoXci9xjkpKYaVlR0wTBPMf9bvDaN4vLYq3mc6dICgrE/o/SgaG33pIBhqtg9EDjiC8IbL0RyTh0XrRGdCxjsAKgCQi4OnGYh+b5uBPx18Tm5xlC0PPjOwUzg/ZEkgQ9udgcxjQdJnlByUALxkdaB5/GHF/xmikx/9g9mhsF2DwWy9oJgQN5+KjLn/0gMNXONtxqIE+bBfbwr8N+7h5XAYMfh9hUbojGE2c0eULA/eSfuBokVQASEt8fqvTF7MRSe2IdVLA9vv37iuUu83ocKIPj/t9U8VvGPKXkLJdpibSMub+y0tLS0tLS0tLS0tLS0tIr6D0k/PEeLVsN6AAAAAElFTkSuQmCC"
+                        src="data:image/jpeg;base64,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"
                         alt="img"
                         class="reposStar"
                       />
-                      <h3>({{ repo.stargazers_count }})</h3>
+                      <h3 class="reposStar-count">({{ repo.stargazers_count }})</h3>
                     </div>
                   </div>
                   <div class="reposImg-arrow_div">
@@ -67,8 +67,14 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #111;
   justify-content: center;
-  background-color: #212121;
+}
+.reposIsloading{
+    padding-top: 50px;
+    margin-bottom: 50px;
+    width: 200px;
+    height: 200px;
 }
 .reposGrid {
   display: grid;
@@ -80,17 +86,15 @@ export default {
   border-radius: 7px;
   border: 1px solid #ddd;
   margin: 30px;
-  box-shadow: 2px 4px 5px #000000;
+  box-shadow: 2px 4px 5px #212121;
 }
 .repoContents {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.reposTitle{
-    color: #745b21;
-}
 .reposTitle {
+  color: #745b21;
   font-size: 18px;
   font-weight: 550;
 }
@@ -104,6 +108,7 @@ export default {
 }
 .reposIndex {
   font-size: 16px;
+  color: #098c1a;
   font-weight: 600;
 }
 .reposUpper-part_two {
@@ -111,8 +116,12 @@ export default {
   align-items: center;
 }
 .reposStar {
-  widows: 30px;
-  height: 30px;
+  widows: 25px;
+  height: 25px;
+}
+.reposStar-count{
+  color: #745b21;
+  font-size: 12px;
 }
 .reposImg-arrow_div {
   display: flex;

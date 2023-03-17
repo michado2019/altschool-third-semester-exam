@@ -24,7 +24,7 @@ export default {
 
 <style scoped>
 .contactWrapper {
-  background-color: #212121;
+  background-color: #111;
 }
 .contactContents {
   display: flex;
