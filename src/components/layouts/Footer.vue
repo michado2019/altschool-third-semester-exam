@@ -1,11 +1,12 @@
 <script>
 export default {
   name: "Footer",
+  props: ['smallScreenNavbar']
 };
 </script>
 
 <template>
-  <div class="footerWrapper">
+  <div class="footerWrapper" :style="smallScreenNavbar ? {top : '65vh'} : {display: ''}">
     <div class="footerContents-one">
       <Router-link to="/" class="footerLinks"> GApp </Router-link>
       <Router-link to="/" class="footerLinks"> Home </Router-link>
@@ -27,7 +28,6 @@ export default {
   background-color: #111;
   height: 121px;
   border-top: 1px solid #3a3a3a;
-  top: 100%;
 }
 .footerContents-one {
   display: grid;

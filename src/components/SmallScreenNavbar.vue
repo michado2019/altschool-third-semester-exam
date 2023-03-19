@@ -1,12 +1,23 @@
 <script>
 export default {
   name: "SmallScreenNavbar",
-  props: ['smallScreenNavbar']
+  props: ['smallScreenNavbar'],
+  data(){
+    return{
+    newState: this.smallScreenNavbar
+    }
+  },
+
+  methods: {
+    handleSmallNav(condition){
+      this.newState = condition
+    }
+  }
 };
 </script>
 
 <template>
-  <div class="smallScreen-wrapper" :style= "[smallScreenNavbar ? {marginLeft: '0', transition: 'all 0.5s'} : {marginLeft: '-500px', transition: 'all 0.5s'}]">
+  <div class="smallScreen-wrapper" :style= "[smallScreenNavbar ? {marginLeft: '0', transition: 'all 0.5s'} : {marginLeft: '-500px', transition: 'all 0.5s'}]" >
     <nav class="smallScreen-navbar_nav">
       <ul class="smallScreen-navbar_lists">
         <Router-link to="/" class="smallScreen-navbar_links">
@@ -28,7 +39,8 @@ export default {
   background-color: #212121;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 65vh;
+  position: absolute;
 }
 .smallScreen-navbar_nav {
   margin-left: -40px;

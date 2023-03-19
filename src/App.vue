@@ -22,10 +22,10 @@ export default {
   <main class="App">
     <Navbar :controlSmallScreenNavbar="this.controlSmallScreenNavbar" />
     <SmallScreenNavbar :smallScreenNavbar="this.smallScreenNavbar" />
-    <div>
+    <div class="content" :style="smallScreenNavbar ? {display : 'none'} : {display: 'block'}">
       <RouterView></RouterView>
     </div>
-    <Footer />
+    <Footer :smallScreenNavbar="this.smallScreenNavbar" />
   </main>
 </template>
 
@@ -42,6 +42,19 @@ export default {
 @media screen and (max-width: 768px) {
   .App {
     max-width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .App {
+    height: 65vh;
+  }
+  .content{
+  position: relative;
+  }
+}
+@media screen and (min-width: 481px) {
+  .content{
+  display: block;
   }
 }
 </style>
