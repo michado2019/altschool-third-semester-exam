@@ -4,6 +4,7 @@ import About from "../pages/About.vue";
 import Contact from "../pages/Contact.vue";
 import Repos from "../pages/Repos.vue";
 import Repo from "../pages/Repo.vue";
+import NotFoundPage from '../pages/NotFoundPage.vue'
 
 const routes = [
   { name: "Home", path: "/", component: Home },
@@ -19,6 +20,7 @@ const routes = [
     path: "/repos/:id",
     component: Repo,
   },
+  { path: '/:pathMatch(.*)', name: 'NotFound', component: NotFoundPage }
   
 ];
 
