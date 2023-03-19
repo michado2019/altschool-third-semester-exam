@@ -45,10 +45,13 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin-left: -40px;
+  padding-bottom: 50px;
 }
+
 .paginationBtns {
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 .paginationBtn-list {
@@ -75,5 +78,11 @@ export default {
   transition: all 0.3s;
   box-shadow: 1px 4px 10px #3a3a3a;
 
+}
+@media screen and (max-width: 585px) {
+  .paginationBtns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
 }
 </style>

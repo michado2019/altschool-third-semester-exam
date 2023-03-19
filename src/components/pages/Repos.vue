@@ -23,11 +23,11 @@ export default {
         .then((response) => ([...this.repos] = response))
         .finally(() => (this.isLoading = false));
     },
-    update(number){
-      this.isLoading = true
-        this.skip = number;
-        this.isLoading = false;
-    }
+    update(number) {
+      this.isLoading = true;
+      this.skip = number;
+      this.isLoading = false;
+    },
   },
   mounted() {
     this.fetchRepos();
@@ -37,7 +37,7 @@ export default {
       this.page = 1;
       this.perPage = 2;
       this.pages = Math.ceil(this.repos.length / this.perPage);
-      this.skip = (this.page * this.perPage) - this.perPage;
+      this.skip = this.page * this.perPage - this.perPage;
     },
   },
 };
@@ -52,13 +52,7 @@ export default {
     />
     <div v-if="error" class="reposError">{{ error }}</div>
     <div v-else class="reposGrid">
-      <div
-        v-for="repo in repos.slice(
-          skip,
-          skip + perPage
-        )"
-      class="reposSlide"
-      >
+      <div v-for="repo in repos.slice(skip, skip + perPage)" class="reposSlide">
         <div class="reposContents">
           <div class="reposContent-div">
             <div class="repoContents">
@@ -99,7 +93,8 @@ export default {
     <Pagination
       :totalRepos="repos.length"
       :reposPerPage="perPage"
-      :page="page" @update-number="update"
+      :page="page"
+      @update-number="update"
     />
   </div>
 </template>
@@ -133,14 +128,14 @@ export default {
   margin: 30px;
   box-shadow: 2px 4px 5px #212121;
 }
-.reposSlide{
+.reposSlide {
   animation: reposSlide 0.3s;
 }
 @keyframes reposSlide {
-  0%{
+  0% {
     margin-top: -150px;
   }
-  100%{
+  100% {
     margin-top: 0;
   }
 }
@@ -220,5 +215,15 @@ export default {
   font-weight: 700;
   margin-left: 80%;
   margin-top: -20px;
+}
+@media screen and (max-width: 585px) {
+  .reposWrapper {
+    height: 100%;
+  }
+  .reposGrid {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
 }
 </style>
