@@ -27,6 +27,7 @@ export default {
   background-color: #111;
   height: 121px;
   border-top: 1px solid #3a3a3a;
+  top: 100%;
 }
 .footerContents-one {
   display: grid;
