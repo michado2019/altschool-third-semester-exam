@@ -7,11 +7,7 @@ export default {
 <template>
   <div class="aboutWrapper">
     <div class="aboutContents">
-      A vue js app using the GitHub API to fetch my GitHub repositories using
-      this endpoint
-      <span class="aboutLink"
-        >https://api.github.com/users/userName/repos</span
-      >. shows a page with a list of all my repositories on GitHub(the page has
+      A vue js app using the GitHub API to fetch my GitHub repositories. Shows a page with a list of all my repositories on GitHub(the page has
       a form of pagination). It has a single page showing data for a single repo
       clicked from the list of repos using nested routes. It uses a wildcard
       route to catch 404 pages.
@@ -22,8 +18,7 @@ export default {
 <style scoped>
 .aboutWrapper {
   height: 65vh;
-  padding-top: 70px;
-  padding-bottom: 300px;
+  padding: 50px 0;
   background-color: #111;
 }
 .aboutContents {
@@ -38,6 +33,9 @@ export default {
   color: #745b21;
 }
 @media screen and (max-width: 600px) {
+  .aboutWrapper{
+  padding-bottom: 450px;
+  }
   .aboutContents {
     width: 90%;
     font-size: 18px;

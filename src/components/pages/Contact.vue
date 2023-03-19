@@ -41,11 +41,11 @@ export default {
   color: #ccc8c8;
 }
 .contactBtn-contact {
-  padding: 20px 80px;
+  padding: 10px 80px;
   border-radius: 7px;
   border: 0;
   background-color: #745b21;
-  margin-top: 70px;
+  margin-top: 20px;
 }
 .contactBtn-contact:hover {
   font-weight: 800;
