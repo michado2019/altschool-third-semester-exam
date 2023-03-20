@@ -96,6 +96,7 @@ export default {
       fetch(url)
         .then((response) => response.json())
         .then((response) => (this.repos = response))
+        .catch((error) => this.error = error) 
         .finally(() => (this.isLoading = false));
     },
   },
@@ -124,6 +125,9 @@ export default {
 .reposGrid {
   display: flex;
   align-items: center;
+}
+.reposError{
+  color: rgb(181, 56, 56);
 }
 .reposContents {
   width: 250px;

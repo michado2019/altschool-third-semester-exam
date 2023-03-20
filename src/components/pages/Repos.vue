@@ -21,6 +21,7 @@ export default {
       fetch(url)
         .then((response) => response.json())
         .then((response) => ([...this.repos] = response))
+        .catch((error) => this.error = error) 
         .finally(() => (this.isLoading = false));
     },
     update(number) {
@@ -114,6 +115,9 @@ export default {
   margin-bottom: 50px;
   width: 200px;
   height: 200px;
+}
+.reposError{
+  color: rgb(181, 56, 56);
 }
 .reposGrid {
   display: grid;
