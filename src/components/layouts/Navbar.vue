@@ -4,7 +4,6 @@ export default {
   props: ["controlSmallScreenNavbar"],
 };
 </script>
-
 <template>
   <div class="navbarWrapper">
     <nav class="navbarNav">
@@ -32,6 +31,7 @@ export default {
 
 <style scoped>
 .navbarWrapper {
+  position: sticky;
   height: 100px;
   background-color: #111;
   top: 0;
