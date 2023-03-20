@@ -4,10 +4,9 @@ export default {
   props: ['smallScreenNavbar'],
   data(){
     return{
-    newState: this.smallScreenNavbar
+      close: false
     }
   },
-
   methods: {
     handleSmallNav(condition){
       this.newState = condition
