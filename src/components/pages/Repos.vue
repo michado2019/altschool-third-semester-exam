@@ -24,12 +24,11 @@ export default {
         .finally(() => (this.isLoading = false));
     },
     update(number) {
-      this.isLoading = true;
       this.skip = number;
-      this.isLoading = false;
     },
   },
   mounted() {
+    this.isLoading = true;
     this.fetchRepos();
   },
   watch: {
