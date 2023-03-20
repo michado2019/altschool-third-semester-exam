@@ -32,6 +32,7 @@ export default {
 .homeWrapper {
   padding-bottom: 50px;
   background-color: #111;
+  height: 65.2vh;
 }
 .homeContents {
   display: flex;
@@ -81,7 +82,7 @@ div {
 }
 .homeBtn-start:hover,
 .homeBtn-contact:hover {
-  font-weight: 800;
+  padding: 10px 15px;
   transition: all 0.3s;
 }
 .homeContact-link,
