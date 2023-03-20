@@ -4,12 +4,13 @@ export default {
   props: ['smallScreenNavbar'],
   data(){
     return{
-      close: false
+      close: this.smallScreenNavbar
     }
   },
   methods: {
-    handleSmallNav(condition){
-      this.newState = condition
+    handleState(state){
+      this.close = state
+      this.$emit("update-state", this.close);
     }
   }
 };
@@ -20,13 +21,13 @@ export default {
     <nav class="smallScreen-navbar_nav">
       <ul class="smallScreen-navbar_lists">
         <Router-link to="/" class="smallScreen-navbar_links">
-          <li class="smallScreen-navbar_list">Home</li>
+          <li class="smallScreen-navbar_list" @click="handleState(state)">Home</li>
         </Router-link>
         <Router-link to="/about" class="smallScreen-navbar_links">
-          <li class="smallScreen-navbar_list">About</li>
+          <li class="smallScreen-navbar_list" @click="handleState(state)">About</li>
         </Router-link>
         <Router-link to="/contact" class="smallScreen-navbar_links">
-          <li class="smallScreen-navbar_list">Contact</li>
+          <li class="smallScreen-navbar_list" @click="handleState(state)">Contact</li>
         </Router-link>
       </ul>
     </nav>

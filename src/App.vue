@@ -14,6 +14,9 @@ export default {
     controlSmallScreenNavbar() {
       this.smallScreenNavbar = !this.smallScreenNavbar;
     },
+    update(state) {
+      this.smallScreenNavbar = false;
+    },
   },
 };
 </script>
@@ -21,7 +24,7 @@ export default {
 <template>
   <main class="App">
     <Navbar :controlSmallScreenNavbar="this.controlSmallScreenNavbar" />
-    <SmallScreenNavbar :smallScreenNavbar="this.smallScreenNavbar" />
+    <SmallScreenNavbar :smallScreenNavbar="this.smallScreenNavbar"  @update-state="update"/>
     <div class="content" :style="smallScreenNavbar ? {display : 'none'} : {display: 'block'}">
       <RouterView></RouterView>
     </div>
