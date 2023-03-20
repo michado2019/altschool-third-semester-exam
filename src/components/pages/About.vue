@@ -18,7 +18,7 @@ export default {
 <style scoped>
 .aboutWrapper {
   height: 65vh;
-  padding: 50px 0;
+  padding: 80px 0;
   background-color: #111;
 }
 .aboutContents {
@@ -34,11 +34,21 @@ export default {
 }
 @media screen and (max-width: 600px) {
   .aboutWrapper{
-  padding-bottom: 450px;
+  padding-bottom: 250px;
   }
   .aboutContents {
     width: 90%;
     font-size: 18px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .aboutWrapper{
+  padding-bottom: 400px;
+  }
+}
+@media screen and (max-width: 345px) {
+  .aboutWrapper{
+  padding-bottom: 450px;
   }
 }
 </style>
