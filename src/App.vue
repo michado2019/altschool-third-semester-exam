@@ -15,7 +15,7 @@ export default {
       this.smallScreenNavbar = !this.smallScreenNavbar;
     },
     update(state) {
-      this.smallScreenNavbar = false;
+      this.smallScreenNavbar = state;
     },
   },
 };
@@ -25,7 +25,7 @@ export default {
   <main class="App">
     <Navbar :controlSmallScreenNavbar="this.controlSmallScreenNavbar" />
     <SmallScreenNavbar :smallScreenNavbar="this.smallScreenNavbar"  @update-state="update"/>
-    <div class="content" :style="smallScreenNavbar ? {display : 'none'} : {display: 'block'}">
+    <div class="content" :style="[smallScreenNavbar ? {display : 'none'} : {display: 'block'}]">
       <RouterView></RouterView>
     </div>
     <Footer :smallScreenNavbar="this.smallScreenNavbar" />
@@ -34,30 +34,6 @@ export default {
 
 <style scoped>
 .App {
-  max-width: 70%;
   margin: 0 auto;
-}
-@media screen and (max-width: 830px) {
-  .App {
-    max-width: 80%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .App {
-    max-width: 100%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .App {
-    height: 65vh;
-  }
-  .content{
-  position: relative;
-  }
-}
-@media screen and (min-width: 481px) {
-  .content{
-  display: block;
-  }
 }
 </style>

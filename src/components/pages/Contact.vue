@@ -34,18 +34,18 @@ export default {
   justify-content: center;
   width: 80%;
   margin: 0 auto;
-  height: 66vh;
+  height: 65.2vh;
   padding-bottom: 50px;
 }
 .contactContents h2{
   color: #ccc8c8;
 }
 .contactBtn-contact {
-  padding: 10px 80px;
+  padding: 15px 80px;
   border-radius: 7px;
   border: 0;
   background-color: #745b21;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .contactBtn-contact:hover {
   font-weight: 800;

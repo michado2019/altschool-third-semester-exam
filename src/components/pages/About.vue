@@ -17,8 +17,8 @@ export default {
 
 <style scoped>
 .aboutWrapper {
-  height: 65vh;
-  padding: 80px 0;
+  height: 65.2vh;
+  padding-top: 100px;
   background-color: #111;
 }
 .aboutContents {
