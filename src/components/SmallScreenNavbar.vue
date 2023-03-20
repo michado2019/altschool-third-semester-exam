@@ -35,7 +35,7 @@ export default {
 
 <style scoped>
 .smallScreen-wrapper{
-  background-color: #212121;
+  background-color: #111;
   left: 0;
   width: 100%;
   height: 65vh;
