@@ -215,7 +215,11 @@ export default {
   box-shadow: 1px 2px 3px 2px #745b21;
   font-weight: 800;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width:540px) {
+  .reposWrapper{
+    height: 100%;
+    padding: 50px 0;
+  }
   .reposGrid {
     flex-direction: column;
   }
