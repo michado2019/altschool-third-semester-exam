@@ -20,8 +20,8 @@ export default {
           </Router-link>
         </button>
         <button class="homeBtn-contact">
-          <a href="mailto: adeshinaobafemi09@gmail.com" class="homeContact-link"
-            >Contact</a
+          <a href="https://michado2019.github.io/michado-portfolio/" class="homeContact-link"
+            >Porfolio</a
           >
         </button>
       </div>
